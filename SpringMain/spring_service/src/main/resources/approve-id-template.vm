@@ -1,0 +1,13 @@
+<html>
+ 
+<head></head>
+ 
+<body>
+    <p>Dear ${firstName} ${lastName}:</p>   
+    <p>Your Uploaded ID has been approved. You can now continue scheduling your exam.</b></p>
+    
+    <p>Thanks,</p>
+    <p>${signature}</p>  
+</body>
+ 
+</html>

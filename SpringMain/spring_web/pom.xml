@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.spring</groupId>
+		<artifactId>SpringMain</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>spring_web</artifactId>
+	<packaging>war</packaging>
+
+	<properties>
+		<maven-war-plugin.version>2.6</maven-war-plugin.version>
+		<commons-io.version>1.4</commons-io.version>
+		<swagger.version>2.4.0</swagger.version>
+		<aspectj.version>1.8.9</aspectj.version>
+		<jackson-core-asl.version>1.9.12</jackson-core-asl.version>
+	</properties>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>com.spring</groupId>
+			<artifactId>spring_dao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+			<dependency>
+			<groupId>com.spring</groupId>
+			<artifactId>spring_service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+			<dependency>
+			<groupId>com.spring</groupId>
+			<artifactId>spring_utility</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectj.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>${jackson-core-asl.version}</version>
+		</dependency>
+	</dependencies>
+	
+
+	<build>
+		<finalName>spring_web</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${maven-war-plugin.version}</version>
+				<configuration>
+					<outputDirectory>target</outputDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
